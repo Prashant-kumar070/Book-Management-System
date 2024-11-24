@@ -3,9 +3,12 @@
 A simple Laravel-based application for searching books by title or author.
 
 ## Features
+- User authentication (register and login).
 - Search books by title or author.
 - Display book details with images and descriptions.
 - Pagination support for book lists.
+- Users can view all the ratings and comments
+- Users can add ratings and comments.
 
 ## Requirements
 - PHP 8.3
