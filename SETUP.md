@@ -5,7 +5,7 @@
 2. Ensure the `php`, `composer`, and `npm` commands are globally accessible.
 
 ### Steps to Setup
-1. Clone the repository: `git clone https://github.com/your-username/book-search.git`
+1. Clone the repository: `git clone https://github.com/Prashant-kumar070/Book-Management-System.git`
 2. Navigate to the project directory: `cd book-search`
 3. Install backend dependencies: `composer install`
 4. Install frontend dependencies: `npm install`
