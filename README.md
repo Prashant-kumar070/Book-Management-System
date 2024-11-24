@@ -17,7 +17,7 @@ A simple Laravel-based application for searching books by title or author.
 - MySQL 8.3
 
 ## Quick Setup
-1. Clone the repository: `git clone https://github.com/your-username/book-search.git`
+1. Clone the repository: `git clone https://github.com/Prashant-kumar070/Book-Management-System.git`
 2. Install dependencies: `composer install` and `npm install`
 3. Configure `.env` and run migrations: `php artisan migrate`
 4. Run seeder `php artisan db:seed` 
