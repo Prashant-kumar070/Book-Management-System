@@ -15,6 +15,17 @@
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+        {{-- Role --}}
+        <div class="mt-4">
+            <x-input-label for="options" :value="__('I am ')" />
+            <x-select id="options" class="block mt-1 w-full" name="role" :value="old('options')" required autofocus>
+                <option value="customer" {{ old('options') == 'customer' ? 'selected' : '' }}>Reader</option>
+                <option value="author" {{ old('options') == 'author' ? 'selected' : '' }}>Author</option>
+                {{-- <option value="option3" {{ old('options') == 'option3' ? 'selected' : '' }}>Option 3</option> --}}
+            </x-select>
+            <x-input-error :messages="$errors->get('options')" class="mt-2" />
+        </div>
+        
 
         <!-- Password -->
         <div class="mt-4">

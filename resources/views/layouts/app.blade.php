@@ -13,8 +13,32 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
+    <style>
+        #preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #39b49a;
+    z-index: 11000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preloader {
+    width: 350px;
+}
+    </style>
+
+</head>
+
     <body class="font-sans antialiased">
+        {{-- <div id="preloader">
+            <a href="{{ url('/') }}"><img class="preloader" src="{{ config('app.url') }}images/loaders/heart-loading2.gif" alt=""></a>
+        </div> --}}
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
@@ -32,5 +56,14 @@
                 {{ $slot }}
             </main>
         </div>
+        <script>
+            $(document).ready(function() {
+                          // Once the window is fully loaded, fade out the preloader
+                          $(window).on('load', function() {
+                              $('#preloader').fadeOut(500); // Fade out the preloader div
+                              $('.preloader').fadeOut(600); // Fade out the loader image
+                          });
+                      });
+          </script>
     </body>
 </html>
